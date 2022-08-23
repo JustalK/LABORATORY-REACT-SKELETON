@@ -1,0 +1,17 @@
+.circular {
+    width: 40px;
+    height: 40px !important;
+    background: red;
+}
+
+.text {
+    font-size: 1rem;
+    background: red;
+}
+
+.rounded,
+.rectangular {
+    width: 210px;
+    height: 60px !important;
+    background: red;
+}
