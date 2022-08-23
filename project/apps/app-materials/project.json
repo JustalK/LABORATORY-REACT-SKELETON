@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/app/src",
+  "sourceRoot": "apps/app-materials/src",
   "projectType": "application",
   "targets": {
     "build": {
@@ -9,14 +9,17 @@
       "defaultConfiguration": "production",
       "options": {
         "compiler": "babel",
-        "outputPath": "dist/apps/app",
-        "index": "apps/app/src/index.html",
+        "outputPath": "dist/apps/app-materials",
+        "index": "apps/app-materials/src/index.html",
         "baseHref": "/",
-        "main": "apps/app/src/main.tsx",
-        "polyfills": "apps/app/src/polyfills.ts",
-        "tsConfig": "apps/app/tsconfig.app.json",
-        "assets": ["apps/app/src/favicon.ico", "apps/app/src/assets"],
-        "styles": ["apps/app/src/styles.scss"],
+        "main": "apps/app-materials/src/main.tsx",
+        "polyfills": "apps/app-materials/src/polyfills.ts",
+        "tsConfig": "apps/app-materials/tsconfig.app.json",
+        "assets": [
+          "apps/app-materials/src/favicon.ico",
+          "apps/app-materials/src/assets"
+        ],
+        "styles": ["apps/app-materials/src/styles.scss"],
         "scripts": [],
         "webpackConfig": "@nrwl/react/plugins/webpack"
       },
@@ -30,8 +33,8 @@
         "production": {
           "fileReplacements": [
             {
-              "replace": "apps/app/src/environments/environment.ts",
-              "with": "apps/app/src/environments/environment.prod.ts"
+              "replace": "apps/app-materials/src/environments/environment.ts",
+              "with": "apps/app-materials/src/environments/environment.prod.ts"
             }
           ],
           "optimization": true,
@@ -47,15 +50,15 @@
       "executor": "@nrwl/web:dev-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "app:build",
+        "buildTarget": "app-materials:build",
         "hmr": true
       },
       "configurations": {
         "development": {
-          "buildTarget": "app:build:development"
+          "buildTarget": "app-materials:build:development"
         },
         "production": {
-          "buildTarget": "app:build:production",
+          "buildTarget": "app-materials:build:production",
           "hmr": false
         }
       }
@@ -64,14 +67,14 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/app/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["apps/app-materials/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/app"],
+      "outputs": ["coverage/apps/app-materials"],
       "options": {
-        "jestConfig": "apps/app/jest.config.ts",
+        "jestConfig": "apps/app-materials/jest.config.ts",
         "passWithNoTests": true
       }
     }
