@@ -22,6 +22,6 @@ describe('App', () => {
       </BrowserRouter>
     );
 
-    expect(getByText(/Welcome app-materials/gi)).toBeTruthy();
+    expect(getByText(/Welcome app-react-loading/gi)).toBeTruthy();
   });
 });

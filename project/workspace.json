@@ -2,6 +2,7 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
-    "app-materials": "apps/app-materials"
+    "app-materials": "apps/app-materials",
+    "app-react-loading": "apps/app-react-loading"
   }
 }

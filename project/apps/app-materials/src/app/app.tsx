@@ -1,5 +1,6 @@
 import { Route, Routes, Link } from 'react-router-dom';
 import Experience1 from './components/Experience1';
+import Experience2 from './components/Experience2';
 
 export function App() {
   return (
@@ -21,6 +22,7 @@ export function App() {
       </div>
       <Routes>
         <Route path="/" element={<Experience1 />} />
+        <Route path="/experience2" element={<Experience2 />} />
       </Routes>
       {/* END: routes */}
     </>
